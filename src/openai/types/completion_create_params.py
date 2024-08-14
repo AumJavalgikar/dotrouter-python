@@ -11,7 +11,7 @@ __all__ = ["CompletionCreateParamsBase", "CompletionCreateParamsNonStreaming", "
 
 
 class CompletionCreateParamsBase(TypedDict, total=False):
-    model: Required[Union[str, Literal["gpt-3.5-turbo-instruct", "davinci-002", "babbage-002"]]]
+    model: Optional[Union[str, Literal["gpt-3.5-turbo-instruct", "davinci-002", "babbage-002"]]]
     """ID of the model to use.
 
     You can use the

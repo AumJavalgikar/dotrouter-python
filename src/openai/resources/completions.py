@@ -41,7 +41,7 @@ class Completions(SyncAPIResource):
     def create(
         self,
         *,
-        model: Union[str, Literal["gpt-3.5-turbo-instruct", "davinci-002", "babbage-002"]],
+        model: Optional[Union[str, Literal["gpt-3.5-turbo-instruct", "davinci-002", "babbage-002"]]] | NotGiven = NOT_GIVEN,
         prompt: Union[str, List[str], Iterable[int], Iterable[Iterable[int]], None],
         best_of: Optional[int] | NotGiven = NOT_GIVEN,
         echo: Optional[bool] | NotGiven = NOT_GIVEN,
@@ -194,7 +194,7 @@ class Completions(SyncAPIResource):
     def create(
         self,
         *,
-        model: Union[str, Literal["gpt-3.5-turbo-instruct", "davinci-002", "babbage-002"]],
+        model: Optional[Union[str, Literal["gpt-3.5-turbo-instruct", "davinci-002", "babbage-002"]]] | NotGiven = NOT_GIVEN,
         prompt: Union[str, List[str], Iterable[int], Iterable[Iterable[int]], None],
         stream: Literal[True],
         best_of: Optional[int] | NotGiven = NOT_GIVEN,
@@ -347,7 +347,7 @@ class Completions(SyncAPIResource):
     def create(
         self,
         *,
-        model: Union[str, Literal["gpt-3.5-turbo-instruct", "davinci-002", "babbage-002"]],
+        model: Optional[Union[str, Literal["gpt-3.5-turbo-instruct", "davinci-002", "babbage-002"]]] | NotGiven = NOT_GIVEN,
         prompt: Union[str, List[str], Iterable[int], Iterable[Iterable[int]], None],
         stream: bool,
         best_of: Optional[int] | NotGiven = NOT_GIVEN,
@@ -496,11 +496,11 @@ class Completions(SyncAPIResource):
         """
         ...
 
-    @required_args(["model", "prompt"], ["model", "prompt", "stream"])
+    @required_args(["prompt"], ["prompt", "stream"])
     def create(
         self,
         *,
-        model: Union[str, Literal["gpt-3.5-turbo-instruct", "davinci-002", "babbage-002"]],
+        model: Optional[Union[str, Literal["gpt-3.5-turbo-instruct", "davinci-002", "babbage-002"]]] | NotGiven = NOT_GIVEN,
         prompt: Union[str, List[str], Iterable[int], Iterable[Iterable[int]], None],
         best_of: Optional[int] | NotGiven = NOT_GIVEN,
         echo: Optional[bool] | NotGiven = NOT_GIVEN,
@@ -572,7 +572,7 @@ class AsyncCompletions(AsyncAPIResource):
     async def create(
         self,
         *,
-        model: Union[str, Literal["gpt-3.5-turbo-instruct", "davinci-002", "babbage-002"]],
+        model: Optional[Union[str, Literal["gpt-3.5-turbo-instruct", "davinci-002", "babbage-002"]]] | NotGiven = NOT_GIVEN,
         prompt: Union[str, List[str], Iterable[int], Iterable[Iterable[int]], None],
         best_of: Optional[int] | NotGiven = NOT_GIVEN,
         echo: Optional[bool] | NotGiven = NOT_GIVEN,
@@ -725,7 +725,7 @@ class AsyncCompletions(AsyncAPIResource):
     async def create(
         self,
         *,
-        model: Union[str, Literal["gpt-3.5-turbo-instruct", "davinci-002", "babbage-002"]],
+        model: Optional[Union[str, Literal["gpt-3.5-turbo-instruct", "davinci-002", "babbage-002"]]] | NotGiven = NOT_GIVEN,
         prompt: Union[str, List[str], Iterable[int], Iterable[Iterable[int]], None],
         stream: Literal[True],
         best_of: Optional[int] | NotGiven = NOT_GIVEN,
@@ -878,7 +878,7 @@ class AsyncCompletions(AsyncAPIResource):
     async def create(
         self,
         *,
-        model: Union[str, Literal["gpt-3.5-turbo-instruct", "davinci-002", "babbage-002"]],
+        model: Optional[Union[str, Literal["gpt-3.5-turbo-instruct", "davinci-002", "babbage-002"]]] | NotGiven = NOT_GIVEN,
         prompt: Union[str, List[str], Iterable[int], Iterable[Iterable[int]], None],
         stream: bool,
         best_of: Optional[int] | NotGiven = NOT_GIVEN,
@@ -1031,7 +1031,7 @@ class AsyncCompletions(AsyncAPIResource):
     async def create(
         self,
         *,
-        model: Union[str, Literal["gpt-3.5-turbo-instruct", "davinci-002", "babbage-002"]],
+        model: Optional[Union[str, Literal["gpt-3.5-turbo-instruct", "davinci-002", "babbage-002"]]] | NotGiven = NOT_GIVEN,
         prompt: Union[str, List[str], Iterable[int], Iterable[Iterable[int]], None],
         best_of: Optional[int] | NotGiven = NOT_GIVEN,
         echo: Optional[bool] | NotGiven = NOT_GIVEN,

@@ -30,7 +30,7 @@ class CompletionCreateParamsBase(TypedDict, total=False):
     [Example Python code](https://cookbook.openai.com/examples/how_to_format_inputs_to_chatgpt_models).
     """
 
-    model: Required[Union[str, ChatModel]]
+    model: Optional[Union[str, ChatModel]]
     """ID of the model to use.
 
     See the

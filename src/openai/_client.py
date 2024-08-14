@@ -99,10 +99,10 @@ class OpenAI(SyncAPIClient):
         - `project` from `OPENAI_PROJECT_ID`
         """
         if api_key is None:
-            api_key = os.environ.get("OPENAI_API_KEY")
+            api_key = os.environ.get("DOTROUTER_API_KEY")
         if api_key is None:
             raise OpenAIError(
-                "The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable"
+                "The api_key client option must be set either by passing api_key to the client or by setting the DOTROUTER_API_KEY environment variable"
             )
         self.api_key = api_key
 
@@ -114,10 +114,7 @@ class OpenAI(SyncAPIClient):
             project = os.environ.get("OPENAI_PROJECT_ID")
         self.project = project
 
-        if base_url is None:
-            base_url = os.environ.get("OPENAI_BASE_URL")
-        if base_url is None:
-            base_url = f"https://api.openai.com/v1"
+        base_url = f"https://api.dotagent.ai/v1"
 
         super().__init__(
             version=__version__,
@@ -326,10 +323,7 @@ class AsyncOpenAI(AsyncAPIClient):
             project = os.environ.get("OPENAI_PROJECT_ID")
         self.project = project
 
-        if base_url is None:
-            base_url = os.environ.get("OPENAI_BASE_URL")
-        if base_url is None:
-            base_url = f"https://api.openai.com/v1"
+        base_url = f"https://api.openai.com/v1"
 
         super().__init__(
             version=__version__,
