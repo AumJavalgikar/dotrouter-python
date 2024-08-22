@@ -1,11 +1,11 @@
 [project]
-name = "openai"
-version = "1.35.14"
-description = "The official Python library for the openai API"
+name = "dotrouter"
+version = "1.0.0"
+description = "The official Python library for the dotrouter API"
 dynamic = ["readme"]
 license = "Apache-2.0"
 authors = [
-{ name = "OpenAI", email = "support@openai.com" },
+{ name = "DotAgent", email = "contact@dotagent.ai" },
 ]
 dependencies = [
     "httpx>=0.23.0, <1",
@@ -40,11 +40,11 @@ classifiers = [
 datalib = ["numpy >= 1", "pandas >= 1.2.3", "pandas-stubs >= 1.1.0.11"]
 
 [project.urls]
-Homepage = "https://github.com/openai/openai-python"
-Repository = "https://github.com/openai/openai-python"
+Homepage = "https://github.com/dot-agent/dotrouter"
+Repository = "https://github.com/dot-agent/dotrouter"
 
 [project.scripts]
-openai = "openai.cli:main"
+dotrouter = "dotrouter.cli:main"
 
 [tool.rye]
 managed = true
@@ -104,7 +104,7 @@ include = [
 ]
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/openai"]
+packages = ["src/dotrouter"]
 
 [tool.hatch.build.targets.sdist]
 # Basically everything except hidden files/directories (such as .github, .devcontainers, .python-version, etc)
