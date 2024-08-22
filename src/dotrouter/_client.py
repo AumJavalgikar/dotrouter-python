@@ -308,10 +308,10 @@ class AsyncOpenAI(AsyncAPIClient):
         - `project` from `OPENAI_PROJECT_ID`
         """
         if api_key is None:
-            api_key = os.environ.get("OPENAI_API_KEY")
+            api_key = os.environ.get("DOTROUTER_API_KEY")
         if api_key is None:
             raise OpenAIError(
-                "The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable"
+                "The api_key client option must be set either by passing api_key to the client or by setting the DOTROUTER_API_KEY environment variable"
             )
         self.api_key = api_key
 
